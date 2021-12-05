@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+}
+
+h1{
+    margin-top: 100px;
+    color:chartreuse;
+    animation-name: text-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.box{
+    animation-name: box-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 200px;
+}
+
+.outer-circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: yellow;
+    animation-name: circle-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.inner-circle{
+    height: 20px;
+    width: 20px;
+    margin-left: 80px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+@keyframes text-animation {
+    100%{
+        transform: scale(2,2);
+    }
+}
+
+@keyframes circle-animation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes box-animation {
+    20%{
+        transform: translate(200px, 350px);
+        background-color: yellowgreen;
+    }
+    30%{
+        transform: translate(450px, 50px);
+        background-color: violet;
+    }
+    60%{
+        transform: translate(650px, 350px);
+        background-color: brown;
+    }
+}
